@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 
 app.get("/",function(req,res){
 
-  let day = date();
+  let day = date.getDate();
   res.render("list",{listTitle:day, newListItems:items});
 
 
