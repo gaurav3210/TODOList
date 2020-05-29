@@ -3,13 +3,13 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const date = require(__dirname+"/day.js");
-var items = ["Buy Food","Cook Food","Eat Food"];
-var workItems = [];
+const mongoose = require("mongoose");
 const app = express();
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
 app.set('view engine', 'ejs');
 
+mongoose.connect('mongodb://localhost:27017/todolistDB', {useNewUrlParser: true, useUnifiedTopology: true});
 app.get("/",function(req,res){
 
   let day = date.getDate();
