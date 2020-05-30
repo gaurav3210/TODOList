@@ -21,13 +21,13 @@ const itemSchema = new mongoose.Schema({
 const Item = mongoose.model("Item",itemSchema);
 
 const item1 = new Item({
-name:"BuyFood"
+name:"AddItem"
 });
 const item2 = new Item({
-  name:"cookFood"
+  name:"UpdateItem"
 });
 const item3 = new Item({
-  name:"eatFood"
+  name:"DeleteItem"
 });
 
 const predefinedItems = [item1,item2,item3];
