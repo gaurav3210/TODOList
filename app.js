@@ -65,12 +65,21 @@ app.get("/",function(req,res){
 
 app.post("/",function(req,res){
  const nextItemName = req.body.newItem;
+const listName = req.body.list;
 
  const newItem = new Item({
      name:nextItemName
  });
- newItem.save();
- res.redirect("/");
+ if(listName=="Today") {
+     newItem.save();
+     res.redirect("/");
+ }else{
+     list.findOne({name:listName},function (err,foundList) {
+         foundList.Items.push(newItem);
+         foundList.save();
+         res.redirect("/"+listName);
+     })
+ }
 });
 
 app.post("/delete",function (req,res) {
