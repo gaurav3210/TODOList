@@ -31,18 +31,27 @@ const item3 = new Item({
 
 const predefinedItems = [item1,item2,item3];
 
-Item.insertMany(predefinedItems,function (err) {
+
+app.get("/",function(req,res){
+
+ Item.find(function (err,item) {
+   if(item.length === 0){
+     Item.insertMany(predefinedItems,function (err) {
   if(err)
   {
     console.log("ERROR OCCURRED");
   }else{
     console.log("Successfully implemented");
   }
+     res.redirect("/");
+  });
 
-})
-app.get("/",function(req,res){
+   }else {
+     res.render("list", {listTitle: "Today", newListItems: item});
+   }
+ });
 
-  res.render("list",{listTitle:"Today", newListItems:predefinedItems});
+
 });
 
 app.post("/",function(req,res){
