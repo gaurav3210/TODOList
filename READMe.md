@@ -18,5 +18,5 @@ Node Backend Server
 Sample Images:
 
 <img src="public/img/Tsample1.jpg"/>
-<img src="public/img/Tsample2.jpg"/>
+<img src="public/img/tsample2.jpg"/>
 <img src="public/img/Tsample3.jpg"/>
