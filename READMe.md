@@ -8,14 +8,14 @@ A simple todo list application comprises of following features:
 <h3>Update new item</h3>
 <h3>Delete new item</h3>
 
+## TECH STACK: ##
 
-Connection with MangoDB Database
+<h3>HTML, CSS</h3>
+<h3>Connection with MangoDB Database</h3>
+<h3>Pages made with the Embedded JavaScript Templating(EJS) </h3>
+<h3>Node Backend Server </h3>
 
-Pages made with the Embedded JavaScript Templating(EJS)
-
-Node Backend Server 
-
-Sample Images:
+## Sample Images: ##
 
 <img src="public/img/Tsample1.jpg"/>
 <img src="public/img/tsample2.jpg"/>
